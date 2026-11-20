@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Field Manual — GTA VI Trophy Guide</title>
+<meta name="description" content="An offline field manual for the 55 PlayStation trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Field Manual No. 55</p>
+    <h1>Leonida Field Manual</h1>
+    <p class="subtitle">A trophy guide and tracker for the platinum. 55 trophies, 1 platinum, 2 gold, 6 silver, 46 bronze. No neon, no noise — just the list, the order, and where each fact comes from.</p>
+  </div>
+  <div class="progress-box" id="progressBox">
+    <p class="progress-count" id="progressCount">0 of 55 earned</p>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-detail" id="progressDetail">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" id="viewChecklist" class="view-tab active">Checklist</button>
+  <button type="button" id="viewRoadmap" class="view-tab">Roadmap to the platinum</button>
+</nav>
+
+<section class="controls" aria-label="Filters and tools">
+  <label class="control search">Search <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off"></label>
+  <label class="control">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="activity">Activities</option>
+      <option value="collectible">Collectibles</option>
+      <option value="exploration">Exploration</option>
+      <option value="combat">Combat &amp; heists</option>
+      <option value="money">Money</option>
+      <option value="completion">Completion</option>
+    </select>
+  </label>
+  <label class="control">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="control">Show
+    <select id="earnedFilter">
+      <option value="all">All trophies</option>
+      <option value="unearned">Unearned only</option>
+      <option value="earned">Earned only</option>
+    </select>
+  </label>
+  <label class="control check"><input id="missableOnly" type="checkbox"> Missable only</label>
+  <label class="control check spoiler"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <span class="tools">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  </span>
+</section>
+
+<main>
+  <section id="checklistView" aria-label="Trophy checklist">
+    <div class="layout">
+      <div class="list-col">
+        <p class="list-meta" id="listMeta">55 trophies</p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="roadmapView" aria-label="Roadmap to the platinum" hidden>
+    <p class="roadmap-intro">The order to earn them in, built from the official descriptions: story first, then contacts and strangers, then the hidden moments, the activities, the exploration, and the heists — with 100% completion last. The four missable trophies are flagged in their stages; do them when the chance appears.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+  </section>
+</main>
+
+<footer>
+  <p>Sources for every guide: the official PlayStation trophy list as published by <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and PSNProfiles, and the trophy's own official description. Guides are written for this manual in its own words; a fact without a source is marked as general play guidance. No Rockstar Games artwork or logo is used anywhere in this guide. Works offline — nothing is fetched over the network.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
